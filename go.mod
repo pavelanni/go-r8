@@ -1,3 +1,7 @@
-module github.com/bitfield/go-r8
+module github.com/pavelanni/go-r8
 
-go 1.14
+go 1.26.0
+
+require golang.org/x/term v0.48.0
+
+require golang.org/x/sys v0.50.0 // indirect

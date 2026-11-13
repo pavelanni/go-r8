@@ -3,6 +3,7 @@ package r8
 
 type CPU struct {
 	PC  int
+	A   int
 	Mem [65536]int
 }
 
@@ -11,5 +12,11 @@ func NewCPU() *CPU {
 }
 
 func (cpu *CPU) Step() {
-	// Over to you to implement `Step`!
+	op := cpu.Mem[cpu.PC]
+	switch op {
+	case 48:
+		cpu.A += 1
+	default:
+	}
+	cpu.PC += 1
 }
